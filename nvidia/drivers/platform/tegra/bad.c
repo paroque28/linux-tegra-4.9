@@ -7,7 +7,7 @@ int __init bad_access(void)
 {
 	static char source[] = "Twenty characters!!!";
 	char dest[10];
-	strncpy(dest, source, strlen(source));
+	strncpy(dest, source, strlen(dest));
         pr_err("%s\n", dest);
 	return 0;
 }
